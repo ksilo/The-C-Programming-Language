@@ -6,8 +6,8 @@
 //debuging print macro
 #define dprint(expr) printf(#expr ": = %d\n", expr)
 // macro swap: interchanges two arguments of type t
-#define swap(t, x, y)	\
-	t temp;			    \
+#define swap(t, x, y)			\
+	t temp;			        \
 	temp = x;			\
 	x = y;				\
 	y = temp;			\

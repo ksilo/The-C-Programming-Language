@@ -21,7 +21,7 @@ void itoa(int n, char s[]) {
 
 void main() {
 	char s[12];
-	int n = -12345;
+	int n = -142345;
 
 	itoa(n, s);
 	printf("%s\n", s);

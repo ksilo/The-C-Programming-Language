@@ -18,7 +18,7 @@ void reverse(char s[], int start, int len) {
     }
 }
 
-void main() {
+int main() {
     char s[] = "karbauskis";
 
     int start = 0;

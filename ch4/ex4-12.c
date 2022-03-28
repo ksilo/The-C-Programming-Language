@@ -19,7 +19,7 @@ void itoa(int n, char s[]) {
 	s[i] = '\0';
 }
 
-void main() {
+int main() {
 	char s[12];
 	int n = -142345;
 

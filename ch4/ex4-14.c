@@ -14,7 +14,7 @@
 	
 
 
-void main() { 
+int main() { 
 	int x = 200;
 	int y = 500;
 

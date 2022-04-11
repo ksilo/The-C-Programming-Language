@@ -24,4 +24,6 @@ int main(void) {
 
     my_strcat(s, t);
     printf("%s\n", s);
+
+    return EXIT_SUCCESS;
 }

@@ -1,5 +1,5 @@
 /*
- * Filename:    getline.c
+ * Filename:    atoi.c
  * Author:      xilo <xilo@rgl.lt>
  * Date:        20-APR-2022
  *
@@ -14,19 +14,17 @@
  * reverse (Chapter 3). and strindex and getop (Chapter 4).
  */
 
-// getline: get line into array s, return length
-int my_getline(char *s, int lim) {
+// atoi: convert string number stored in s[] to integer;
+int atoi(char *s) {
 
-    char c, *p;
+    int n = 0, sign;
 
-    p = s; // p points to s
-    while (--lim > 0 && (c = getchar()) != EOF && c != '\n') 
-        *s++ = c;
-    
-    if (c == '\n') 
-        *s++ = c;
-    
-    *s = '\0';
-
-    return s - p;
+    while (isspace(*s)) // skip white space
+        *s++;
+    sign = (*s == '-') ? -1 : 1;
+    if (*s == '+' || *s == '-') // skip sign if present
+        *s++;
+    while (isdigit(*s))
+        n = 10 * n + (*s++ - '0');
+    return sign * n;
 }

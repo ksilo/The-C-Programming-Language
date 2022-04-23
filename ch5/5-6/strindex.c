@@ -11,7 +11,7 @@
  * Rewrite appropriate programs from earlier chapters and exercises
  * with pointers instead of array indexing. Good posibilities include getline
  * (Chapters 1 and 4), atoi, itoa, and their variants (Chapter 2, 3 and 4),
- * reverse (Chapter 3). and strindex and getop (Chapter 4).
+ * reverse (Chapter 3), and strindex and getop (Chapter 4).
  */
 
 // strindex: returns index of t in s, else -1

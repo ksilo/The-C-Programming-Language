@@ -15,23 +15,20 @@
  */
 
 // itoa: convert n to characters in s
-void itoa(int n, char *s) {
-
-    int sign;
-    char *p = s;     // pointing to first element of array s
+void itoa(int n, char *s) 
+{
+        int sign;
+        char *p = s;         // pointing to first element of array s
     
-    if ((sign = n) < 0) {
-        n *= -1;     // make n positive
-    }
-
-    while (n > 0) {
-        *p++ = (n % 10) + '0';
-        n /= 10;
-    }
-
-    if (sign < 0)
-        *p++ = '-';
-    *p = '\0';
+        if ((sign = n) < 0) 
+                n *= -1;     // make n positive
+        while (n > 0) {
+                *p++ = (n % 10) + '0';
+                n /= 10;
+        }
+        if (sign < 0)
+                *p++ = '-';
+        *p = '\0';
     
-    reverse(s); //defined in the same folder
+        reverse(s); //defined in the same folder
 }

@@ -15,24 +15,25 @@
  */
 
 //strncpy: copies up to n characters from the string pointed to, by t to s.
-void my_strncpy(char *s, char *t, int n) {
-    int count;
+void my_strncpy(char *s, char *t, int n) 
+{
+        int count;
 
-    for (count = 0; count < n; count++)
-        *s++ = *t++;
-    *s = '\0';
+        for (count = 0; count < n; count++)
+                *s++ = *t++;
+        *s = '\0';
 }
 
 // strncat: appends the string pointed to by t to the end of the s up to n characters long.
-void my_strncat(char *s, char *t, int n) {
-    int count;
+void my_strncat(char *s, char *t, int n) 
+{
+        int count;
 
-    while (*s) // setting pointer to the end of s
-        *s++;
-
-    for (count = 0; count < n; count++)
-        *s++ = *t++;
-    *s = '\0';
+        while (*s)      // setting pointer to the end of s
+                *s++;
+        for (count = 0; count < n; count++)
+                *s++ = *t++;
+        *s = '\0';
 }
 
 /* strncmp: compares at most the first n bytes of s and t.
@@ -40,15 +41,16 @@ void my_strncat(char *s, char *t, int n) {
  *        return value > 0 str2 is less than str1
  *        return value = 0 str1 is equal to str2
  */
-int my_strncmp(char *s, char *t, int n) {
-    int count;
+int my_strncmp(char *s, char *t, int n) 
+{
+        int count;
 
-    for(count = 0; count < n; count++)
-        if (*s != *t)
-            return *s - *t;
-        else {
-            *s++;
-            *t++;
-        }
-    return 0;
+        for(count = 0; count < n; count++)
+                if (*s != *t)
+                        return *s - *t;
+                else {
+                        *s++;
+                        *t++;
+                }
+        return 0;
 }

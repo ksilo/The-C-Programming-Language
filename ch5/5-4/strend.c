@@ -13,17 +13,16 @@
  */
 
 // strend: returns 1 if the string t occurs at the end of the string s, else 0
-int strend(char *s, char *t) {
-    char *pt = t; // creating pointer for tracking len of string t
+int strend(char *s, char *t) 
+{
+        char *pt = t;        // creating pointer for tracking len of string t
 
-    while (*s)   // setting pointer to the end of string s 
-        *s++; 
-
-    while (*t)   // setting pointer to the end of string t 
-        *t++;
-
-    while (*pt++)
-        if (*--s != *--t)
-            return 0;
-    return 1;            
+        while (*s)           // setting pointer to the end of string s 
+                *s++; 
+        while (*t)           // setting pointer to the end of string t 
+                *t++;
+        while (*pt++)
+                if (*--s != *--t)
+                        return 0;
+        return 1;            
 }

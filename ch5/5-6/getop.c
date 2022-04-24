@@ -15,22 +15,24 @@
  */
 
 // getop: get next operator or numeric operand
-int getop(char *s) {
-    int i, c;
+int getop(char *s) 
+{
+        int i; 
+        int c;
 
-    while ((*s = c = getch()) == ' ' || c == '\t')
-        ;
-    *++s = '\0';
-    if (!isdigit(c) && c != '.')
-        return c;
-    if (isdigit(c))
-        while (isdigit(*s++ = c = getch()))
-            ;
-    if (c == '.')
-        while(isdigit(*s++ = c = getch()))
-            ;
-    *s = '\0';
-    if (c != EOF)
-        ungetch(c);
-    return NUMBER;
+        while ((*s = c = getch()) == ' ' || c == '\t')
+                ;
+        *++s = '\0';
+        if (!isdigit(c) && c != '.')
+                return c;
+        if (isdigit(c))
+                while (isdigit(*s++ = c = getch()))
+                        ;
+        if (c == '.')
+                while(isdigit(*s++ = c = getch()))
+                        ;
+        *s = '\0';
+        if (c != EOF)
+                ungetch(c);
+        return NUMBER;
 }

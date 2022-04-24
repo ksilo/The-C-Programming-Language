@@ -15,18 +15,17 @@
  */
 
 // strindex: returns index of t in s, else -1
-int strindex(char *s, char *t) {
+int strindex(char *s, char *t) 
+{
+        char *ps = s;
+        char *pt = t;
+        char *pss;      // pointer to pointer
 
-    char *ps = s;
-    char *pt = t;
-    char *pss;     // pointer to pointer
-
-
-    while (*ps++ != '\0') {
-        for (pss = ps; *pt != '\0' && *pss == *pt; *pss++, *pt++) 
-            ;
-        if((pt - t) > 0 && *pt == '\0') 
-            return ps - s; // return index
-    }
-    return -1;
+        while (*ps++ != '\0') {
+                for (pss = ps; *pt != '\0' && *pss == *pt; *pss++, *pt++) 
+                        ;
+                if((pt - t) > 0 && *pt == '\0') 
+                         return ps - s;        // return index
+        }
+        return -1;
 }

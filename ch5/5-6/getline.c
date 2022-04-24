@@ -15,18 +15,16 @@
  */
 
 // getline: get line into array s, return length
-int my_getline(char *s, int lim) {
-
-    char c, *p;
-
-    p = s; // p points to s
-    while (--lim > 0 && (c = getchar()) != EOF && c != '\n') 
-        *s++ = c;
-    
-    if (c == '\n') 
-        *s++ = c;
-    
-    *s = '\0';
-
-    return s - p;
+int my_getline(char *s, int lim) 
+{
+        char c; 
+        char *p;
+        
+        p = s;        // p points to s
+        while (--lim > 0 && (c = getchar()) != EOF && c != '\n') 
+                *s++ = c;
+        if (c == '\n') 
+                *s++ = c;
+        *s = '\0';
+        return s - p;
 }

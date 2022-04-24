@@ -18,12 +18,13 @@
 
 void my_strcat(char *s, char *t);
 
-int main(void) {
-    char s[1000] = "I have played "; // s must be big enough
-    char t[] = "ghiribizzi!";
+int main(void) 
+{
+        char s[1000] = "I have played ";        // s must be big enough
+        char t[] = "ghiribizzi!";
 
-    my_strcat(s, t);
-    printf("%s\n", s);
+        my_strcat(s, t);
+        printf("%s\n", s);
 
-    return EXIT_SUCCESS;
+        return EXIT_SUCCESS;
 }

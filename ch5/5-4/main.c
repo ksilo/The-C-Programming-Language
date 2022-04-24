@@ -16,14 +16,15 @@
 
 int strend(char *s, char *t);
 
-int main(void) {
-    char s[] = "Answer to the Ultimate Question of Life,"
-               " the Universe, and Everything is 42";
-    char t[] = "42";
-    char w[] = "542";    
+int main(void) 
+{
+        char s[] = "Answer to the Ultimate Question of Life,"
+                   " the Universe, and Everything is 42";
+        char t[] = "42";
+        char w[] = "542";    
 
-    printf("%d\n", strend(s,t));
-    printf("%d\n", strend(s,w));
+        printf("%d\n", strend(s,t));
+        printf("%d\n", strend(s,w));
 
-    return EXIT_SUCCESS;
+        return EXIT_SUCCESS;
 }

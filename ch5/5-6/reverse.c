@@ -15,16 +15,17 @@
  */
 
 // reverse: reverse char array s in place
-void reverse(char *s) {
+void reverse(char *s) 
+{
+        char *p;
+        char tmp;
 
-    char *p, tmp;
-
-    p = s;
-    while (*p != '\0') // find address of last element
-       *p++; 
-    while(p - s > 0) { // compare string length
-        tmp = *s;      // swapt last to first element
-        *s++ = *--p;
-        *p = tmp;
-    }
+        p = s;
+        while (*p != '\0')     // find address of last element
+                *p++; 
+        while(p - s > 0) {     // compare string length
+                tmp = *s;      // swapt last to first element
+                *s++ = *--p;
+                *p = tmp;
+        }
 }

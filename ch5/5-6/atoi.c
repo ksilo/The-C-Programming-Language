@@ -15,16 +15,17 @@
  */
 
 // atoi: convert string number stored in s[] to integer;
-int atoi(char *s) {
+int atoi(char *s) 
+{
+        int n = 0, 
+        int sign;
 
-    int n = 0, sign;
-
-    while (isspace(*s)) // skip white space
-        *s++;
-    sign = (*s == '-') ? -1 : 1;
-    if (*s == '+' || *s == '-') // skip sign if present
-        *s++;
-    while (isdigit(*s))
-        n = 10 * n + (*s++ - '0');
-    return sign * n;
-}
+        while (isspace(*s)) // skip white space
+                *s++;
+        sign = (*s == '-') ? -1 : 1;
+        if (*s == '+' || *s == '-') // skip sign if present
+                *s++;
+        while (isdigit(*s))
+                n = 10 * n + (*s++ - '0');
+        return sign * n;
+}                                                                              

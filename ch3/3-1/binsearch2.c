@@ -13,6 +13,7 @@
  * inside the loop and measure the diferrence in runtime.
  */
 
+// binsearch: find x in v[0] <= v[1] <= ... <= v[n-1]
 int binsearch2(int x, int *v, int size)
 {
 	int low = 0;

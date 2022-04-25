@@ -30,27 +30,3 @@ void shellsort(int *n, int size)
  * of order. Since gap is eventually reduced to one, all elements are eventually 
  * ordered corectlly.
  */
-
-#include <stdio.h>
-#include <stdlib.h>
-
-void printarr(int *n, int size)
-{
-	int i;
-	
-	for (i = 0; i < size; i++)
-		printf("%d ", n[i]);
-	putchar('\n');
-}
-
-int main(void) 
-{
-	int n[] = {8, 9, 10, 4, 7, 1, 2, 11};
-	int size = sizeof(n) / sizeof(int);
-
-	printarr(n, size);
-	shellsort(n, size);
-	printarr(n, size);
-
-	return EXIT_SUCCESS;
-}

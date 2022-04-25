@@ -31,6 +31,9 @@ void shellsort(int *n, int size)
  * ordered corectlly.
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void printarr(int *n, int size)
 {
 	int i;
@@ -39,9 +42,6 @@ void printarr(int *n, int size)
 		printf("%d ", n[i]);
 	putchar('\n');
 }
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int main(void) 
 {

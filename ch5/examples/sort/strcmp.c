@@ -1,8 +1,8 @@
-// strcpm: return < 0 if s < t, 0 if s == t, > 0 if s > t
-int strcmp(char *s, char *t)
+// strcmp: return <0 if d<s, 0 if d==s, >0 if d>s
+int mstrcmp(char *d, char *s)
 {
-	for ( ; *s == *t; s++, t++)
-		if  (*s == '\0')
+	for ( ; *d == *s; *d++, *s++)
+		if (*d == '\0')
 			return 0;
-	return *s - *t;
+	return *d - *s;
 }

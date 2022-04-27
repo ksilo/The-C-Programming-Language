@@ -31,11 +31,9 @@ int readlines(char *arr, char *lineptr[], int maxlines)
 			return -1;
 		else {
 			line[len-1] = '\0';
-			p += len;
+			p += len-1;
 			mstrcpy(p, line);
 			lineptr[nlines++] = p;
 		}
 	return nlines;
 }	
-
-

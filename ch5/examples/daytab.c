@@ -28,11 +28,21 @@ void month_day(int year, int yearday, int *pmonth, int *pday)
 	*pmonth = i;
 	*pday = yearday;
 }
+// name_month:
+char *month_name(int n)
+{
+	static char *name[] = {"Illegal month", "January", "February", 
+			       "March", "April", "May", "June", "July", 
+			       "August", "September", "October", 
+			       "November", "December"};
+	
+	return (n < 1 || n > 12) ? *name : name[n];
+}
 
 int main(void) 
 {
-	int year = 1988;
-	int month = 3;
+	int year = 1970;
+	int month = 1;
 	int day = 1;
 	int *pmonth;
 	int *pday; 
@@ -41,11 +51,10 @@ int main(void)
 	pday = &day;
 
 	int yearday = day_of_year(year, month, day);
-	printf("1988 March 1st was %d day of the year\n", yearday);
+	printf("1970 January 1st was %d day of the year\n", yearday);
 
 	month_day(year, yearday, pmonth, pday);
-	printf("1988 61st day of the year was %d, %d day\n", *pmonth, *pday);
-
+	printf("1970 1st day of the year was %s %d\n", month_name(*pmonth), *pday);
 
 	return EXIT_SUCCESS;
 }

@@ -83,7 +83,7 @@ char *month_name(int n)
 int main(void) 
 {
 	int year = 2038;
-	int month = 12;
+	int month = 1;
 	int day = 19;
 	int *pmonth;
 	int *pday; 

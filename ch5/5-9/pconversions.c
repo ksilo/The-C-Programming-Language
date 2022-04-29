@@ -1,4 +1,4 @@
-/*
+/* 
  * Filename:    pconversions.c
  * Author:      xilo <xilo@rgl.lt>
  * Date:        29-APR-2022
@@ -8,13 +8,13 @@
  *
  * Exercise 5-9, page 114
  *
- * Rewrite the routines day_of_year and month_day with
- * pointers instead of indexing.
+ * Rewrite the routines day_of_year and month_day with pointer
+ * instead of indexing.
  */
 #include <stdio.h>
 #include <stdlib.h>
 
-static int daytab[2][13] = {
+static char daytab[2][13] = {
 	{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
 	{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 };
@@ -38,7 +38,7 @@ int day_of_year(int year, int month, int day)
       		exit(EXIT_FAILURE);
 	}
 	for (i = 1; i < month; i++)
-		day += *(*(daytab + leap) + month); 
+		day += *(*(daytab + leap) + i);
 	return day;
 }
 
@@ -83,7 +83,7 @@ char *month_name(int n)
 int main(void) 
 {
 	int year = 2038;
-	int month = 12;
+	int month = 1;
 	int day = 19;
 	int *pmonth;
 	int *pday; 

@@ -83,7 +83,7 @@ char *month_name(int n)
 int main(void) 
 {
 	int year = 2038;
-	int month = 1;
+	int month = 12;
 	int day = 19;
 	int *pmonth;
 	int *pday; 
@@ -96,7 +96,7 @@ int main(void)
 
 
 	month_day(year, yearday, pmonth, pday);
-	printf("%d %d day of the year --> %s %d\n", year, *pmonth, month_name(*pmonth), *pday);
+	printf("%d %d day of the year --> %s %d\n", year, yearday, month_name(*pmonth), *pday);
 
 	return EXIT_SUCCESS;
 }

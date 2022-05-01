@@ -25,13 +25,13 @@ int main(int argc, char *argv[])
 					number = 1;
 					break;
 				default:
-					printf("error\n");
+					printf("find: illegal option %c\n", c);
 					argc = 0;
 					found = -1;
 					break;
 			}
 		if (argc != 1)
-			printf("error\n");
+			printf("Usage: find -x -n pattern\n");
 		else
 			while (mgetline(line, MAXLINE) > 0) {
 				lineno++;

@@ -6,6 +6,7 @@
 
 int mgetline(char *line, int MAX);
 
+// find: print lines that match pattern from 1st arg
 int main(int argc, char *argv[])
 {
 	char line[MAXLINE];
@@ -44,4 +45,3 @@ int main(int argc, char *argv[])
 			}
 		return found;
 }
-

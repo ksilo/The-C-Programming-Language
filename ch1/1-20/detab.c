@@ -1,5 +1,5 @@
 /* 
- * Filename:    deetab.c
+ * Filename:    detab.c
  * Author:      xilo <xilo@rgl.lt>
  * Date:        06-MAY-2022
  *

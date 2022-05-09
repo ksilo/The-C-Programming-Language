@@ -19,8 +19,7 @@
 char *lineptr[MAXLINES];	// pointers to text lines
 
 int readlines(char *lineptr[], int nlines);
-void writelinesf(char *lineptr[], int nlines);
-void writelinesr(char *lineptr[], int nlines);
+void writelines(char *lineptr[], int nlines, int reverse);
 
 void mqsort(void *lineptr[], int left, int right,
 		int (*comp)(void *, void *));
@@ -51,7 +50,7 @@ int main(int argc, char *argv[])
 	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
 		mqsort((void **) lineptr, 0, nlines-1,
 				(int (*)(void *, void *))(numeric ? numcmp : mstrcmp));
-		(reverse? writelinesr(lineptr, nlines) : writelinesf(lineptr, nlines));
+		writelines(lineptr, nlines, reverse);
 		return EXIT_SUCCESS;
 	} else {
 		printf("input too big to sort\n");

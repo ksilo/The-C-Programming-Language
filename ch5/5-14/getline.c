@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <ctype.h>
 
-int mgetline(char *s, int lim)
+int mgetline(char *s, int lim, int lower)
 {
 	int c;
 	char *p = s;

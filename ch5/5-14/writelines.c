@@ -17,11 +17,17 @@
 #include <stdio.h>
 
 // writelines : write outputlines
-void writelinesr(char *lineptr[], int nlines)
+void writelines(char *lineptr[], int nlines, int reverse)
 {
 	puts("--------------------------------");
-	nlines -= 1;
-	while (nlines >= 0)
-		printf("%s\n", lineptr[nlines--]);
+	if (reverse) {
+		nlines -= 1;
+		while (nlines >= 0)
+			printf("%s\n", lineptr[nlines--]);
+	
+	} else {
+		while (nlines-- > 0)
+			printf("%s\n", *lineptr++);
+	}
 	puts("--------------------------------");
 }
